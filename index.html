@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>esapp 服務</title>
+<link rel="icon" href="icons/files.svg" type="image/svg+xml">
+<meta name="color-scheme" content="light dark">
+<style>
+  :root {
+    --bg: #eef1f4;
+    --panel: #ffffff;
+    --ink: #17202b;
+    --muted: #5d6876;
+    --line: #d9dee5;
+    --focus: #0369a1;
+    font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #13181f; --panel: #1b222b; --ink: #e8ecf1; --muted: #98a3b1; --line: #2a333e; --focus: #7dd3fc; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--ink); line-height: 1.6; }
+  main { max-width: 40rem; margin: 0 auto; padding: 4.5rem 1.25rem 3rem; }
+  h1 { font-size: 2.25rem; font-weight: 700; letter-spacing: -.01em; margin: 0 0 .25rem; }
+  .lede { color: var(--muted); margin: 0 0 1rem; }
+  section { margin-top: 2.25rem; }
+  h2 { font-size: .95rem; font-weight: 600; color: var(--muted); margin: 0 0 .6rem; }
+  h2 small { font-weight: 400; margin-left: .5rem; }
+  ul { list-style: none; margin: 0; padding: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+  li + li { border-top: 1px solid var(--line); }
+  ul a { display: grid; grid-template-columns: 3.25rem 1fr; gap: 0 1rem; align-items: center; padding: 1rem 1.25rem; color: inherit; text-decoration: none; }
+  ul a:hover { background: color-mix(in srgb, var(--ink) 4%, transparent); }
+  ul a:focus-visible { outline: 3px solid var(--focus); outline-offset: -3px; border-radius: 18px; }
+  img { width: 3.25rem; height: 3.25rem; grid-row: span 2; }
+  .name { font-size: 1.125rem; font-weight: 600; }
+  .desc { color: var(--muted); font-size: .95rem; }
+  .host { font-size: .8rem; opacity: .8; }
+  footer { margin-top: 3rem; color: var(--muted); font-size: .85rem; }
+  footer a { color: inherit; }
+  @media (max-width: 30rem) { main { padding-top: 2.5rem; } h1 { font-size: 1.75rem; } .host { display: none; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>esapp 服務</h1>
+  <p class="lede">工作用的線上服務都在這裡。</p>
+
+  <section>
+    <h2>常用<small>用公司帳號登入</small></h2>
+    <ul>
+      <li><a href="https://files.esapp.net/">
+        <img src="icons/files.svg" alt="">
+        <span class="name">Files</span>
+        <span class="desc">檔案與共用資料夾，可直接線上編輯文件 <span class="host">files.esapp.net</span></span>
+      </a></li>
+      <li><a href="https://vault.esapp.net/#/sso?identifier=00000000-01DC-01DC-01DC-000000000000">
+        <img src="icons/vault.svg" alt="">
+        <span class="name">Vault</span>
+        <span class="desc">密碼庫，保存與分享各系統的密碼 <span class="host">vault.esapp.net</span></span>
+      </a></li>
+      <li><a href="https://gate.esapp.net/">
+        <img src="icons/gate.svg" alt="">
+        <span class="name">Gate</span>
+        <span class="desc">連線到伺服器與內部後台，限 IT 人員 <span class="host">gate.esapp.net</span></span>
+      </a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>AI 工具<small>各自登入</small></h2>
+    <ul>
+      <li><a href="https://aichat.esapp.net/">
+        <img src="icons/aichat.svg" alt="">
+        <span class="name">AI 聊天</span>
+        <span class="desc">和 AI 對話、上傳文件提問 <span class="host">aichat.esapp.net</span></span>
+      </a></li>
+      <li><a href="https://llm.esapp.net/">
+        <img src="icons/llm.svg" alt="">
+        <span class="name">LLM Center</span>
+        <span class="desc">自架語言模型的管理與 API <span class="host">llm.esapp.net</span></span>
+      </a></li>
+      <li><a href="https://aiky.esapp.net/">
+        <img src="icons/aiky.svg" alt="">
+        <span class="name">AI Know You</span>
+        <span class="desc">電腦使用紀錄與每日報告 <span class="host">aiky.esapp.net</span></span>
+      </a></li>
+      <li><a href="https://memory-admin.esapp.net/">
+        <img src="icons/memory.svg" alt="">
+        <span class="name">記憶庫後台</span>
+        <span class="desc">管理 AI 助理的長期記憶（Hindsight） <span class="host">memory-admin.esapp.net</span></span>
+      </a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>專案<small>各自登入</small></h2>
+    <ul>
+      <li><a href="https://brightbean.esapp.net/">
+        <img src="icons/brightbean.svg" alt="">
+        <span class="name">BrightBean Studio</span>
+        <span class="desc">BrightBean 工作室後台 <span class="host">brightbean.esapp.net</span></span>
+      </a></li>
+      <li><a href="https://smartvendingcms.esapp.net/admin">
+        <img src="icons/vending.svg" alt="">
+        <span class="name">Smart Vending CMS</span>
+        <span class="desc">智慧販賣機的內容管理 <span class="host">smartvendingcms.esapp.net</span></span>
+      </a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>帳號</h2>
+    <ul>
+      <li><a href="https://auth.esapp.net/login/esapp">
+        <img src="icons/account.svg" alt="">
+        <span class="name">帳號設定</span>
+        <span class="desc">修改密碼、綁定 Passkey 或兩步驟驗證 <span class="host">auth.esapp.net</span></span>
+      </a></li>
+    </ul>
+  </section>
+
+  <footer>電腦或手機要同步檔案，請安裝 <a href="https://docs.opencloud.eu/docs/user/">OpenCloud 用戶端</a>，伺服器填 files.esapp.net。</footer>
+</main>
+</body>
+</html>
